@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Exercicios</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html"><p>HOME</p></a>
+        <a href=""><p>BCD</p></a>
+        <a href="/pages/pwfe.html"><p>PWFE</p></a>
+        <a href=""><p>PROJECTS</p></a>
+        <a href=""><p>LIMA</p></a>
+        <a href=""><p>PWBE</p></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="ant">
+        <a href="/pages/pwfe.html"
+          ><button><img src="/images/seta-esquerda.png" /></button
+        ></a>
+      </div>
+
+      <div class="card-topic">
+        <h2 class="page-title">Exercícios de Fixação:</h2>
+        <span
+          >Exercícios para praticar os
+          <a href="/pages/conceitosIniciais.html">conceitos iniciais.</a></span
+        >
+
+        <br />
+        <br />
+
+        <h3>EXERCÍCIO 01:</h3>
+        <p class="js-concepts">Diferença entre dois valores.</p>
+
+        <div class="question">
+          <label for="numberInput">Digite um número:</label>
+          <button class="inputs" onclick="numberInput()">
+            <input id="numberInput" type="text" />
+          </button>
+
+          <label for="numberInput2">Digite mais um número:</label>
+          <button class="inputs" onclick="numberInput2()">
+            <input type="text" id="numberInput2" />
+          </button>
+
+          <button class="button-concepts" onclick="diferenca()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 0 -->
+        </div>
+
+        <h3>EXERCÍCIO 02:</h3>
+        <p class="js-concepts">Verifica se o valor é ímpar ou par.</p>
+
+        <div class="question">
+          <label for="numberValue">Digite um número:</label>
+          <button class="inputs" onclick="numberValue()">
+            <input type="text" id="numberValue" />
+          </button>
+
+          <p class="output"></p>
+          <!-- 1 -->
+        </div>
+
+        <h3>EXERCÍCIO 03:</h3>
+        <p class="js-concepts">Verifica se uma nota é múltipla de outra.</p>
+
+        <div class="question">
+          <label for="firstGrade">Digite a primeira nota:</label>
+          <button class="inputs" onclick="firstGrade()">
+            <input id="firstGrade" type="text" />
+          </button>
+
+          <label for="secondGrade">Digite a segunda nota:</label>
+          <button class="inputs" onclick="secondGrade()">
+            <input type="text" id="secondGrade" />
+          </button>
+
+          <button class="button-concepts" onclick="multiplos()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 2 -->
+        </div>
+
+        <h3>EXERCÍCIO 04:</h3>
+        <p class="js-concepts">Converte Celcius em Fahrenheit.</p>
+
+        <div class="question">
+          <label for="temperature">Digite uma temperatura em Celcius:</label>
+          <button class="inputs" onclick="temperaturaCelcius()">
+            <input type="text" id="temperature" />
+          </button>
+
+          <button class="button-concepts" onclick="conversao()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 3 -->
+        </div>
+
+        <h3>EXERCÍCIO 05:</h3>
+        <p class="js-concepts">Calculo de área.</p>
+
+        <div class="question">
+          <label for="base">Digite a Base:</label>
+          <button class="inputs" onclick="baseInput()">
+            <input type="text" id="base" />
+          </button>
+
+          <label for="altura">Digite a Altura:</label>
+          <button class="inputs" onclick="alturaInput()">
+            <input type="text" id="altura" />
+          </button>
+
+          <button class="button-concepts" onclick="areaCalc()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 4 -->
+        </div>
+
+        <h3>EXERCÍCIO 06:</h3>
+        <p class="js-concepts">
+          Verifica se a média da aprovado ou reprovado e se é par ou ímpar.
+        </p>
+
+        <div class="question">
+          <label for="firstNota">Digite a primeira nota:</label>
+          <button class="inputs" onclick="nota1()">
+            <input id="firstNota" type="text" />
+          </button>
+
+          <label for="secondNota">Digite a segunda nota:</label>
+          <button class="inputs" onclick="nota2()">
+            <input type="text" id="secondNota" />
+          </button>
+
+          <button class="button-concepts" onclick="aprovado()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 5 -->
+        </div>
+
+        <h3>EXERCÍCIO 07:</h3>
+        <p class="js-concepts">Calcula o IMC.</p>
+
+        <div class="question">
+          <label for="alturaImc">Digite a sua altura:</label>
+          <button class="inputs" onclick="alturaImc()">
+            <input id="imcAltura" type="text" />
+          </button>
+
+          <label for="imcPeso">Digite o seu peso:</label>
+          <button class="inputs" onclick="pesoImc()">
+            <input type="text" id="imcPeso" />
+          </button>
+
+          <button class="button-concepts" onclick="resultadoImc()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 6 -->
+        </div>
+
+        <h3>EXERCÍCIO 08:</h3>
+        <p class="js-concepts">Verifica se o ano é bissexto.</p>
+
+        <div class="question">
+          <label for="ano">Digite o ano:</label>
+          <button class="inputs" onclick="anoBissexto()">
+            <input id="ano" type="text" />
+          </button>
+
+          <p class="output"></p>
+          <!-- 7 -->
+        </div>
+
+        <h3>EXERCÍCIO 09:</h3>
+        <p class="js-concepts">Conversão por taxa de câmbio.</p>
+
+        <div class="question">
+          <label for="rate">Digite a taxa:</label>
+          <button class="inputs" onclick="taxa()">
+            <input id="rate" type="text" />
+          </button>
+
+          <label for="value">Digite o valor:</label>
+          <button class="inputs" onclick="valorConverter()">
+            <input id="value" type="text" />
+          </button>
+
+          <button class="button-concepts" onclick="valorConvertido()">
+            RESULTADO
+          </button>
+          <p class="output"></p>
+          <!-- 8 -->
+        </div>
+
+        <h3>EXERCÍCIO 10:</h3>
+        <p class="js-concepts">Tabuada.</p>
+
+        <div class="question">
+          <label for="valorTabuada">Digite um valor entre 1 e 9:</label>
+          <button class="inputs" onclick="tabuada()">
+            <input id="valorTabuada" type="text" />
+          </button>
+
+          <p class="output"></p>
+          <!-- 9 -->
+          <p class="output"></p>
+          <!-- 10 -->
+          <p class="output"></p>
+          <!-- 11 -->
+          <p class="output"></p>
+          <!-- 12 -->
+          <p class="output"></p>
+          <!-- 13 -->
+          <p class="output"></p>
+          <!-- 14 -->
+          <p class="output"></p>
+          <!-- 15 -->
+          <p class="output"></p>
+          <!-- 16 -->
+          <p class="output"></p>
+          <!-- 17 -->
+          <p class="output"></p>
+          <!-- 18 -->
+        </div>
+
+        <h3>EXERCÍCIO 11:</h3>
+        <p class="js-concepts">Pedra, papel e tesoura.</p>
+
+        <div class="question">
+          <button class="button-concepts" onclick="jokempo()">RESULTADO</button>
+
+          <p class="output"></p>
+          <!-- 19 -->
+        </div>
+
+        <h3>EXERCÍCIO 12:</h3>
+        <p class="js-concepts">Fatorial.</p>
+
+        <div class="question">
+          <label for="valorFatorial">Digite um valor:</label>
+          <button class="inputs" onclick="fatorial()">
+            <input id="valorFatorial" type="text" />
+          </button>
+
+          <p class="output"></p>
+          <!-- 20 -->
+        </div>
+
+
+
+      </div>
+    </main>
+
+    <script>
+      let number1 = "";
+      let number2 = "";
+
+      function numberInput() {
+        number1 = Number(window.prompt("Qual o primeiro número?"));
+
+        if (number1) {
+          document.getElementById("numberInput").value = number1;
+        } else {
+          alert("Número não fornecido. Valor padrão será 7.");
+          number1 = 7;
+          document.getElementById("numberInput").value = number1;
+        }
+      }
+
+      function numberInput2() {
+        number2 = Number(window.prompt("Qual o segundo número?"));
+
+        if (number2) {
+          document.getElementById("numberInput2").value = number2;
+        } else {
+          alert("Número não fornecido. Valor padrão será 1.");
+          number2 = 1;
+          document.getElementById("numberInput2").value = number2;
+        }
+      }
+
+      function diferenca() {
+        let diferenca = number1 - number2;
+        document.getElementsByClassName(
+          "output"
+        )[0].innerHTML = `A diferença é de: ${diferenca}.`;
+      }
+
+      function numberValue() {
+        let even = Number(window.prompt("Enter the number: "));
+
+        if (even) {
+          document.getElementById("numberValue").value = even;
+        } else {
+          alert("Número não fornecido. Valor padrão será 1.");
+          even = 1;
+          document.getElementById("numberValue").value = even;
+        }
+
+        if (even % 2 == 0) {
+          document.getElementsByClassName("output")[1].innerHTML =
+            "O número é par.";
+        } else {
+          document.getElementsByClassName("output")[1].innerHTML =
+            "O número é ímpar.";
+        }
+      }
+
+      let grade1 = "";
+      let grade2 = "";
+
+      function firstGrade() {
+        grade1 = Number(window.prompt("Insira a 1° nota:"));
+
+        if (grade1) {
+          document.getElementById("firstGrade").value = grade1;
+        } else {
+          alert("Número não fornecido. Valor padrão será 1.");
+          grade1 = 1;
+          document.getElementById("firstGrade").value = grade1;
+        }
+      }
+
+      function secondGrade() {
+        grade2 = Number(window.prompt("Insira a 2° nota:"));
+
+        if (grade2) {
+          document.getElementById("secondGrade").value = grade2;
+        } else {
+          alert("Número não fornecido. Valor padrão será 7.");
+          grade2 = 7;
+          document.getElementById("secondGrade").value = grade2;
+        }
+      }
+
+      function multiplos() {
+        if (grade1 > grade2) {
+          if (grade1 % grade2 == 0) {
+            document.getElementsByClassName("output")[2].innerHTML =
+              "É múltiplo.";
+          } else {
+            document.getElementsByClassName("output")[2].innerHTML =
+              "Não é múltiplo.";
+          }
+        } else {
+          if (grade2 % grade1 == 0) {
+            document.getElementsByClassName("output")[2].innerHTML =
+              "É múltiplo.";
+          } else {
+            document.getElementsByClassName("output")[2].innerHTML =
+              "Não é múltiplo.";
+          }
+        }
+      }
+
+      let temperatura = "";
+
+      function temperaturaCelcius() {
+        temperatura = Number(window.prompt("Insira a temperatura em Celcius:"));
+
+        if (temperatura) {
+          document.getElementById("temperature").value = temperatura;
+        } else {
+          alert("Temperatura não fornecida. Valor padrão será 32°C.");
+          temperatura = 32;
+          document.getElementById("temperature").value = temperatura;
+        }
+      }
+
+      function conversao() {
+        let conversao = temperatura * 1.8 + 32;
+        document.getElementsByClassName(
+          "output"
+        )[3].innerHTML = `A temperatura em Fahrenheit é: ${conversao}`;
+      }
+
+      let base = "";
+      let altura = "";
+
+      function baseInput() {
+        base = Number(window.prompt("Digite a base: "));
+
+        if (base) {
+          document.getElementById("base").value = base;
+        } else {
+          alert("Valor não fornecido. Valor padrão será 14.");
+          base = 14;
+          document.getElementById("base").value = base;
+        }
+      }
+
+      function alturaInput() {
+        altura = Number(window.prompt("Digite a altura: "));
+
+        if (altura) {
+          document.getElementById("altura").value = altura;
+        } else {
+          alert("Valor não fornecido. Valor padrão será 7.");
+          altura = 7;
+          document.getElementById("altura").value = altura;
+        }
+      }
+
+      function areaCalc() {
+        let calc = (base * altura) / 2;
+        document.getElementsByClassName(
+          "output"
+        )[4].innerHTML = `A área é: ${calc}`;
+      }
+
+      let n1 = "";
+      let n2 = "";
+
+      function nota1() {
+        n1 = Number(window.prompt("Insira a primeira nota: "));
+
+        if (n1) {
+          document.getElementById("firstNota").value = n1;
+        } else {
+          alert("Valor não fornecido. Valor padrão será 7.");
+          n1 = 7;
+          document.getElementById("firstNota").value = n1;
+        }
+      }
+
+      function nota2() {
+        n2 = Number(window.prompt("Insira a segunda nota: "));
+
+        if (n2) {
+          document.getElementById("secondNota").value = n2;
+        } else {
+          alert("Valor não fornecido. Valor padrão será 4.");
+          n2 = 4;
+          document.getElementById("secondNota").value = n2;
+        }
+      }
+
+      function aprovado() {
+        let media = (n1 + n2) / 2;
+
+        if (media >= 6) {
+          if (media % 2 == 0) {
+            document.getElementsByClassName(
+              "output"
+            )[5].innerHTML = `<br>You passed. Your avarage is: ${media} and your avarage is even.`;
+          } else {
+            document.getElementsByClassName(
+              "output"
+            )[5].innerHTML = `<br>You passed. Your avarage is: ${media} and your avarage is odd.`;
+          }
+        } else {
+          if (media % 2 == 0) {
+            document.getElementsByClassName(
+              "output"
+            )[5].innerHTML = `<br>You failed. Your avarage is: ${media} and your avarage is even.`;
+          } else {
+            document.getElementsByClassName(
+              "output"
+            )[5].innerHTML = `<br>You failed. Your avarage is: ${media} and your avarage is odd.`;
+          }
+        }
+      }
+
+      let altu = "";
+      let peso = "";
+
+      function alturaImc() {
+        altu = Number(window.prompt("Insira sua altura: "));
+
+        if (altu) {
+          document.getElementById("imcAltura").value = altu;
+        } else {
+          alert("Valor não fornecido.");
+          altu = "Valor não fornecido.";
+          document.getElementById("imcAltura").value = altu;
+        }
+      }
+
+      function pesoImc() {
+        peso = Number(window.prompt("Insira seu peso: "));
+
+        if (peso) {
+          document.getElementById("imcPeso").value = peso;
+        } else {
+          alert("Valor não fornecido.");
+          peso = "Valor não fornecido.";
+          document.getElementById("imcPeso").value = peso;
+        }
+      }
+
+      function resultadoImc() {
+        let imcCalc = peso / (altu * altu);
+
+        if (imcCalc <= 16.9) {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're very underweight."; // Você está muito abaixo do peso
+        } else if (imcCalc > 16.9 && imcCalc <= 18.4) {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're underweight."; // Você está abaixo do peso
+        } else if (imcCalc > 18.4 && imcCalc <= 24.9) {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're at an ideal weight."; // Você está no peso ideal
+        } else if (imcCalc > 24.9 && imcCalc <= 29.9) {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're overweight."; // Você está acima do peso
+        } else if (imcCalc > 29.9 && imcCalc <= 34.9) {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're in obesity class I."; // Você está com obesidade grau I
+        } else if (imcCalc > 34.9 && imcCalc <= 40) {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're in obesity class II."; // Você está com obesidade grau II
+        } else {
+          document.getElementsByClassName("output")[6].innerHTML =
+            "You're in obesity class III."; // Você está com obesidade grau III
+        }
+      }
+
+      function anoBissexto() {
+        let year = Number(window.prompt("Insira o ano: "));
+
+        if (year) {
+          document.getElementById("ano").value = year;
+        } else {
+          alert("Valor não fornecido.");
+          year = "Valor não fornecido.";
+          document.getElementById("ano").value = year;
+        }
+
+        if ((year % 4 == 0 && year % 100 !== 0) || year % 400 == 0) {
+          document.getElementsByClassName("output")[7].innerHTML =
+            "This year is a leap year."; // Esse ano é bissexto.
+        } else {
+          document.getElementsByClassName("output")[7].innerHTML =
+            "This year is not a leap year."; // Esse ano não é bissexto.
+        }
+      }
+
+      let taxaInput = "";
+      let valorInput = "";
+
+      function taxa() {
+        taxaInput = Number(window.prompt("Insira a taxa: "));
+
+        if (taxaInput) {
+          document.getElementById("rate").value = taxaInput;
+        } else {
+          alert("Valor não fornecido.");
+          taxaInput = "Valor não fornecido.";
+          document.getElementById("rate").value = taxaInput;
+        }
+      }
+
+      function valorConverter() {
+        valorInput = Number(window.prompt("Enter the value: "));
+
+        if (valorInput) {
+          document.getElementById("value").value = valorInput;
+        } else {
+          alert("Valor não fornecido.");
+          valorInput = "Valor não fornecido.";
+          document.getElementById("value").value = valorInput;
+        }
+      }
+
+      function valorConvertido() {
+        let rateCalc = valorInput * taxaInput;
+        document.getElementsByClassName(
+          "output"
+        )[8].innerHTML = `Your converted amount with the rate is: ${rateCalc.toFixed(
+          2
+        )}`;
+      }
+
+      function tabuada() {
+        let number = Number(window.prompt("Digite um valor entre 1 e 9: "));
+        let count = 9;
+
+        if (number) {
+          document.getElementById("valorTabuada").value = number;
+        } else {
+          alert("Valor não fornecido.");
+          number = "Valor não fornecido.";
+          document.getElementById("valorTabuada").value = number;
+        }
+
+        for (let i = 1; i <= 10; i++) {
+          let result = number * i;
+          document.getElementsByClassName("output")[
+            count
+          ].innerHTML = `${number} x ${i} = ${result}`;
+          count++;
+        }
+      }
+
+      function jokempo() {
+        let options = ["Rock", "Paper", "Scissors"];
+        let index = Math.floor(Math.random() * options.length);
+        let randomChoice = options[index];
+
+        if (randomChoice == "Rock") {
+          document.getElementsByClassName('output')[19].innerHTML = "Tie."; // Empate.
+        } else if (randomChoice == "Paper") {
+          document.getElementsByClassName('output')[19].innerHTML = "You lost!"; // Você perdeu.
+        } else {
+          document.getElementsByClassName('output')[19].innerHTML = "You win!"; // Você ganhou.
+        }
+      }
+
+      function fatorial() {
+        let factorial = Number(window.prompt("Insira um valor positivo: "));
+
+        if (factorial) {
+          document.getElementById("valorFatorial").value = factorial;
+        } else {
+          alert("Valor não fornecido.");
+          factorial = "Valor não fornecido.";
+          document.getElementById("valorFatorial").value = factorial;
+        }
+
+        if (factorial < 0) {
+          document.write("This number is negative.");
+        } else {
+          let indexFactorial = 1;
+          for (let i = 1; i <= factorial; i++) {
+            indexFactorial *= i;
+          }
+          document.getElementsByClassName('output')[20].innerHTML = (`The factorial of ${factorial} is: ${indexFactorial}`);
+      }
+      }
+    </script>
+  </body>
+</html>

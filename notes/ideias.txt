@@ -1,0 +1,3 @@
+- NA HOME: coloca algo como se fosse um sobre mim e um sumário para saber o que cada sigla da navbar significa
+
+- NOS SCRIPTS: tentar usar o onclick do button pra puxar uma função que coloca o prompt

@@ -1,0 +1,27 @@
+- ESTRUTURA:
+@media (condição) {
+    elemento {
+
+    }
+}
+
+- SOBRE IMAGENS:
+    1. Para a imagem não ficar achatada ou esticada na hora que a tela diminuir, é bom usar max-width ao invés de width e declarar um height, mesmo que seja 0% ou 'auto', dessa forma ele vai se manter proporcional. Por exemplo:
+
+@media (max-width: 430px) {
+    .initialize img {
+        max-width: 21%;
+        height: 0%;
+        align-self: center;
+    }
+}
+
+    2. Para iamgens como background, é bom usar object-fit, ele vai evitar que a imagem seja distorcida. Por exemplo:
+
+img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+    - O cover vai ajustar a imagem para o tamanho da tela e até cortará pedaços se necessário para preencher melhor. Também da para usar outras opções como contain (para fazer a imagem caber inteiramente no espaço, mas deixando bordas) ou fill (a imagem preenche o espaço, mas pode distorcer).

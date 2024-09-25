@@ -1,0 +1,9 @@
+# Ignorar arquivos pessoais e de sistema
+*.log
+*.xml
+*.lnk
+AppData/
+Documents/
+Downloads/
+OneDrive/
+Pictures/

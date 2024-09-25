@@ -1,0 +1,145 @@
+@import url(/styles/index.css);
+@import url(/styles/ui-ux.css);
+@import url(/styles/introjs.css);
+@import url(/styles/conceitosIniciais.css);
+@import url(/styles/fixacaoConceitos.css);
+@import url(/styles/dom-functions.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Resetando todos os elementos para eliminar margens, espaçamentos, bordas, etc. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o comportamento de elementos bloqueados */
+html, body {
+    height: 100%;
+    font-family: "Poppins";
+    min-height: 100%;
+    min-width: 320px; /* Impede quebra em telas muito pequenas */
+}
+
+/* Configurando a formatação básica dos textos */
+body {
+    line-height: 1.5;
+    font-size: 18px;
+    background: linear-gradient(to bottom, palevioletred, #fff);
+    background-repeat: no-repeat;
+}
+
+/* Ajustando tamanhos de fontes e margens em listas não ordenadas */
+ul, ol {
+    list-style: none;
+}
+
+/* Removendo sublinhado de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Definindo borda padrão para imagens */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 10% 5%;
+    max-width: 100%; /* Limita a largura do conteúdo dentro do main */
+    width: 100%; /* Certifica-se de que main ocupa a largura completa */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5%;
+    font-size: 1.3em;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(30px); 
+    -webkit-backdrop-filter: blur(30px); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    color: #000;
+}
+
+nav a {
+    display: flex;
+}
+
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburguer span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.container {
+    height: 100vh;
+    background: linear-gradient(135deg, #f4f4f9 30%, palevioletred 60%);
+}
+
+/* RESPONSIVIDADE - MEDIA QUERIES */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburguer {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.ant button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.next button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Variáveis</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html"><p>HOME</p></a>
+        <a href=""><p>BCD</p></a>
+        <a href="/pages/pwfe.html"><p>PWFE</p></a>
+        <a href=""><p>PROJECTS</p></a>
+        <a href=""><p>LIMA</p></a>
+        <a href=""><p>PWBE</p></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="ant">
+        <a href="/pages/pwfe.html"><button><img src="/images/seta-esquerda.png"></button></a>
+      </div>
+
+      <div class="card-topic">
+        <h2 class="page-title">Conceitos Iniciais:</h2>
+        <span>Entendendo a window e o document.</span>
+
+        <br>
+        <br>
+
+        <h2 class="sub-title">WINDOW:</h2>
+        <p class="js-concepts">A window em JavaScript é um objeto global que representa a janela do navegador. Ele fornece acesso a várias funcionalidades essenciais, como:</p>
+
+        <p class="js-concepts"><h3>Manipulação do DOM:</h3> Permite acessar e modificar elementos da página.</p>
+            
+        <p class="js-concepts"><h3>Eventos:</h3> Facilita o registro e a gestão de eventos, como cliques e movimentos do mouse.</p>
+            
+        <p class="js-concepts"><h3>Armazenamento:</h3> Oferece APIs como localStorage e sessionStorage para armazenamento de dados no navegador.</p>
+            
+        <p class="js-concepts"><h3>Navegação:</h3> Permite controlar o histórico do navegador, redirecionar a URL e abrir novas janelas ou abas.</p>
+            
+        <p class="js-concepts"><h3>Timers:</h3> Fornece métodos como setTimeout e setInterval para agendar execução de funções.</p>
+        
+        <p class="js-concepts">Em resumo, a window é fundamental para a interação com a interface do usuário e para a manipulação de comportamentos no ambiente do navegador.</p>
+
+        <h2>EXEMPLOS:</h2>
+        
+        <div class="question">
+          <h3>1. window.alert:</h3>
+          <span>O alert serve para exibir uma mensagem de alerta na tela.</span>
+          <button class="button-concepts" onclick="windowAlert()">ALERTA</button>
+        </div>
+        
+        <div class="question">
+          <h3>2. window.confirm:</h3>
+          <span>O confirm serve para exibir uma mensagem de confirmação ou cancelamento.</span>
+          <button class="button-concepts" onclick="windowConfirm()">CONFIRME</button>
+        </div>
+        
+        <div class="question">
+          <h3>3. window.prompt:</h3>
+          <span>O prompt serve para exibir um input na tela.</span>
+
+          <label for="nameInput">Digite seu nome:</label>
+          <button class="inputs" onclick="askName()"><input id="nameInput" type="text"></button>
+
+          <label for="dogsName">Digite o nome do seu cachorro:</label>
+          <button class="inputs" onclick="askDogsName()"><input type="text" id="dogsName"></button>
+        </div>
+
+        <div class="question">
+          <h3>4. document.write:</h3>
+          <span>O write serve para adicionar texto diretamente no meu HTML, na minha tela de exibição.</span>
+
+          <button class="forms" onclick="documentWrite()">Formulário</button>
+          <p class="output"></p>  <!-- 0 -->
+          <p class="output"></p>  <!-- 1 -->
+        </div>
+
+        <div class="question">
+          <h3>5. Number:</h3>
+          <span>O Number é usado para especificar que input recebeerá um valor numérico, dessa forma ele consegue fazer contas e dar resultados corretos ao invés de fazer uma concatenação dos valores, como seria caso ele identificasse o input como uma String.</span>
+
+          <h4>-- Vamos calcular uma média:</h4>
+          <label for="firstGrade">Digite uma nota:</label>
+          <button class="inputs" onclick="grade1()"><input type="text" id="firstGrade"></button>
+
+          <label for="secondGrade">Digite outra nota:</label>
+          <button class="inputs" onclick="grade2()"><input type="text" id="secondGrade"></button>
+
+          <button class="button-concepts" onclick="media()">MÉDIA</button>
+          <p class="output"></p>  <!-- 2 -->
+          <p class="output"></p>  <!-- 3 -->
+        </div>
+
+        <div class="question">
+          <h3>6. Laços de repetição:</h3>
+          <h4>FOR: usado quando há um limite de vezes que deve ser executado.</h4>
+          <span>FOR que se inícia no 1 e encerra no 10:</span>
+          <button class="button-concepts" onclick="forExample()">RESULTADO</button>
+          <p class="output"></p>  <!-- 4 -->
+
+          <h4>WHILE: usado quando há uma condicional que seja seu limite e o faça parar.</h4>
+          <span>WHILE que enquanto o valor que se inicia em 20 for menor do que 50 ele continua se repetindo.</span>
+          <button class="button-concepts" onclick="whileExample()">RESULTADO</button>
+
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 6 -->
+          <p class="output"></p>  <!-- 7 -->
+          <p class="output"></p>  <!-- 8 -->
+          <p class="output"></p>  <!-- 9 -->
+          <p class="output"></p>  <!-- 10 -->
+          <p class="output"></p>  <!-- 11 -->
+          <p class="output"></p>  <!-- 12 -->
+          <p class="output"></p>  <!-- 13 -->
+          <p class="output"></p>  <!-- 14 -->
+          <p class="output"></p>  <!-- 15 -->
+          <p class="output"></p>  <!-- 16 -->
+          <p class="output"></p>  <!-- 17 -->
+          <p class="output"></p>  <!-- 18 -->
+          <p class="output"></p>  <!-- 19 -->
+          <p class="output"></p>  <!-- 20 -->
+          <p class="output"></p>  <!-- 21 -->
+          <p class="output"></p>  <!-- 22 -->
+          <p class="output"></p>  <!-- 23 -->
+          <p class="output"></p>  <!-- 24 -->
+          <p class="output"></p>  <!-- 25 -->
+          <p class="output"></p>  <!-- 26 -->
+          <p class="output"></p>  <!-- 27 -->
+          <p class="output"></p>  <!-- 28 -->
+          <p class="output"></p>  <!-- 29 -->
+          <p class="output"></p>  <!-- 30 -->
+          <p class="output"></p>  <!-- 31 -->
+          <p class="output"></p>  <!-- 32 -->
+          <p class="output"></p>  <!-- 33 -->
+          <p class="output"></p>  <!-- 34 -->
+          <p class="output"></p>  <!-- 35 -->
+
+          <h4>DO WHILE: é executado pelo menos uma vez obrigatoriamente, e depois valida a condicional.</h4>
+          <span>DO WHILE que verifica os números ímpares de 100 a 150.</span>
+          <button class="button-concepts" onclick="doWhileExample()">RESULTADO</button>
+
+          <p class="output"></p>  <!-- 36 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 5 -->
+          <p class="output"></p>  <!-- 100 -->
+
+
+        </div>
+
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      var myName = ''
+      var dogsName = ''
+
+      function windowAlert() {
+        window.alert("Hello, I'm javascript, nice to meet you!");
+      } 
+
+      function windowConfirm() {
+        window.confirm("Are you enjoying this class?");
+      }
+      
+      function askName() {
+        myName = window.prompt("Qual seu nome?");
+
+        if (myName) {
+          document.getElementById('nameInput').value = myName;
+        } else {
+          alert("Nenhum nome foi fornecido!"); 
+          myName = "Nome não fornecido."; 
+          document.getElementById('nameInput').value = myName;
+        }
+      }
+
+      function askDogsName() {
+        dogsName = window.prompt("Qual o nome do seu cachorro?");
+
+        if (dogsName) {
+          document.getElementById('dogsName').value = dogsName;
+        } else {
+          alert("Nenhum nome foi fornecido!");
+          dogsName = "Nome não fornecido.";
+          document.getElementById('dogsName').value = dogsName;
+        }
+      }
+
+      function documentWrite() {
+        document.getElementsByClassName("output")[0].innerHTML = "Nome: " + myName;
+        document.getElementsByClassName("output")[1].innerHTML = "Nome do cachorro: " + dogsName;
+      }
+
+      var firstGrade = '';
+      var secondGrade = '';
+
+      function grade1() {
+        firstGrade = Number(window.prompt("Enter the first grade:"));
+
+        if (firstGrade) {
+          document.getElementById('firstGrade').value = firstGrade;
+        } else {
+          alert("Nenhum número foi fornecido. O número padrão será 1.");
+          firstGrade = 1;
+          document.getElementById('firstGrade').value = firstGrade;
+        }
+      }
+
+      function grade2() {
+        secondGrade = Number(window.prompt("Enter the second grade:"));
+
+        if (secondGrade) {
+          document.getElementById('secondGrade').value = secondGrade;
+        } else {
+          alert("Nenhum número foi fornecido. O número padrão será 7.");
+          secondGrade = 7;
+          document.getElementById('secondGrade').value = secondGrade;
+        }
+      }
+
+      function media() {
+        var average = (firstGrade + secondGrade) / 2;
+
+        document.getElementsByClassName('output')[2].innerHTML = "MÉDIA: " + average;
+
+        if (average >= 6) {
+          document.getElementsByClassName('output')[3].innerHTML = "Aprovado.";
+        } else {
+          document.getElementsByClassName('output')[3].innerHTML = "Reprovado.";
+        }
+      }
+
+      function forExample() {
+        for (let i = 1; i <= 10; i++) {
+          console.log(i);
+          document.getElementsByClassName('output')[4].innerHTML = i;
+        }
+      }
+
+      function whileExample() {
+        let counter = 20;
+        let limit = 50;
+        let count = 5;
+
+        while (counter <= limit) {
+          document.getElementsByClassName('output')[count].innerHTML = (`Current number: ${counter}`);
+          counter++;
+          count++;
+        }
+      }
+
+      function doWhileExample() {
+        let odd = 100;
+        let count = 36;
+
+        do {
+          if (odd % 2 != 0) {
+            document.getElementsByClassName('output')[count].innerHTML = (`${odd}`);
+          }
+          odd++;
+          count++;
+        } while (odd <= 150);
+      }
+    </script>
+  </body>
+</html>

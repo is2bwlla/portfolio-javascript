@@ -1,0 +1,41 @@
+.js-concepts {
+    margin-bottom: 15px;
+}
+
+.js-concepts:nth-child(7) {
+    margin-top: 15px;
+}
+
+.question {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    width: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.question input {
+    border: 2px solid palevioletred;
+    background-color: transparent;
+    outline: none;
+    height: 25px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+.button-concepts {
+    width: 100px;
+    height: 30px;
+    border: 3px solid brown;;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    color: brown;
+    font-weight: 900;
+}
+
