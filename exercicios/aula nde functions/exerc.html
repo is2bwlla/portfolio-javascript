@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TESTE</h1>
+    <script>
+        let nome = "Isabella"
+        let salario = 1400
+        let salarioAnual = salario * 12
+
+        json()
+        function json() {
+            let lalal = {
+                Nome: nome,
+                Salario: salario,
+                RendimentoAnual: salarioAnual
+            }
+
+            let lalalJSON = JSON.stringify(lalal);
+            document.write(lalalJSON)
+        }
+
+        conversao()
+        function conversao() {
+            let celsius = 32
+            let result = celsius * 9/5 + 32;
+
+            document.write(`<br>A temperatura em fahrenheit é: ${result}`)
+        }
+    </script>
+</body>
+</html>

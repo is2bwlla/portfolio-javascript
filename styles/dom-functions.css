@@ -1,4 +1,22 @@
-#image-dom div {
+#image-dom {
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
+}
+
+.exercise-choose img {
+    width: 100%;
+    height: auto;
+}
+
+.exercise-choose {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.exercise-choose:hover {
+    transform: scale(1.02); 
 }

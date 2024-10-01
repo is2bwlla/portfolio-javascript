@@ -12,6 +12,11 @@
     flex-direction: column;
 }
 
+.question img {
+    width: 40%;
+    height: auto;
+}
+
 .inputs {
     width: 20px;
     border: none;

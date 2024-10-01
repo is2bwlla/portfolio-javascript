@@ -6,15 +6,28 @@
     <link rel="stylesheet" href="/styles/styles.css" />
     <title>DOM e Functions</title>
   </head>
+
   <body>
     <header>
       <nav>
-        <a href="/index.html"><p>HOME</p></a>
-        <a href=""><p>BCD</p></a>
-        <a href="/pages/pwfe.html"><p>PWFE</p></a>
-        <a href=""><p>PROJECTS</p></a>
-        <a href=""><p>LIMA</p></a>
-        <a href=""><p>PWBE</p></a>
+        <a href="/index.html">
+          <p>HOME</p>
+        </a>
+        <a href="">
+          <p>BCD</p>
+        </a>
+        <a href="/pages/pwfe.html">
+          <p>PWFE</p>
+        </a>
+        <a href="">
+          <p>PROJECTS</p>
+        </a>
+        <a href="">
+          <p>LIMA</p>
+        </a>
+        <a href="">
+          <p>PWBE</p>
+        </a>
       </nav>
     </header>
 
@@ -26,14 +39,122 @@
       </div>
 
       <div class="card-topic">
-        <h2 class="page-title">POO e Arrays:</h2>
+        <h2 class="page-title">DOM e Functions:</h2>
         <h3>O que é o DOM?</h3>
 
-        <br>
-        <div id="image-dom">
-            <img class="img-page-ux-ui" src="/images/arvore-dom.jpg" alt="imagem de um computador para representar ux/ui"/>
+        <br />
+
+        <h5>
+          O DOM (Document Object Model) é uma interface de programação que
+          representa a estrutura de um documento HTML ou XML como uma árvore de
+          nós, onde cada elemento, atributo e texto no documento é um nó que
+          pode ser acessado e manipulado via JavaScript. Isso permite que os
+          desenvolvedores modifiquem dinamicamente o conteúdo, a estrutura e o
+          estilo de uma página web em resposta a interações do usuário, sem
+          precisar recarregar a página inteira.
+        </h5>
+        <h4>-- Aula por Ana Maluf e Isabella.</h4>
+
+        <br />
+
+        <h3>EXERCÍCIO 01:</h3>
+        <div class="question">
+          <p class="js-concepts">Mudando texto da tela com DOM.</p>
+          <p id="text">Melhor aula</p>
+          <button class="button-concepts">CLIQUE</button>
         </div>
-       
+
+        <h3>EXERCÍCIO 02:</h3>
+        <div class="question">
+          <p class="js-concepts">Contador de cliques com DOM.</p>
+          <p id="contador">0</p>
+          <button class="button-concepts">CLIQUE</button>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <h3>O que são o Functions?</h3>
+        <h5>
+          São blocos de códigos reutilizáveis que executam uma tarefa específica
+          ou calcula um valor. Elas servem para organizar o código, permitindo
+          que você agrupe operações relacionadas e estruture seu cósigo a fim de
+          evitar repetições.
+        </h5>
+
+        <br />
+
+        <h5>FUNÇÃO DECLARADA: ideal para funções globais.</h5>
+        <h5>EXPRESSÃO DE FUNÇÃO: útil para funções usadas localmente.</h5>
+        <h5>
+          FUNÇÃO DE SETA: melhor para callbacks curtos, funções anônimas e
+          simplificação de sintaxe.
+        </h5>
+
+        <br />
+        <h3>EXERCÍCIO 01:</h3>
+        <p class="js-concepts">Adivinhe o certo.</p>
+        <button class="exercise-choose" onclick="erro()">
+          <img src="/images/functions-errada.png" alt="Alternativa" />
+        </button>
+        <button class="exercise-choose" onclick="acerto()">
+          <img src="/images/functions-certa.png" alt="Alternativa" />
+        </button>
+
+        <br />
+        <p class="output"></p>
+        <!-- 0 -->
+
+        <h3>EXERCÍCIO 02:</h3>
+        <p class="js-concepts">Dobrando o valor.</p>
+
+        <div class="question">
+          <button class="inputs" onclick="dobrar()">
+            <input type="text" id="valorDobrado" />
+          </button>
+
+          <p class="output"></p>
+          <!-- 1 -->
+        </div>
+      </div>
+
+      <script>
+        document
+          .getElementsByClassName("button-concepts")[0]
+          .addEventListener("click", function () {
+            document.getElementById("text").innerText = "JavaScript com DOM";
+          });
+
+        let count = 0;
+        document
+          .getElementsByClassName("button-concepts")[1]
+          .addEventListener("click", function () {
+            count++;
+            document.getElementById("contador").innerText = count;
+          });
+
+        function erro() {
+          document.getElementsByClassName("output")[0].innerHTML =
+            "Resposta errada :(";
+        }
+
+        function acerto() {
+          document.getElementsByClassName("output")[0].innerHTML =
+            "Resposta certa :)";
+        }
+
+        function dobrar() {
+          let valor = Number(window.prompt("Insira o valor: "));
+
+          let dobrarValor = (valor) => {
+            return valor * 2;
+          };
+
+          valor = dobrarValor(valor);
+          document.getElementsByClassName("output")[1].innerHTML = `${valor}`;
+        }
+      </script>
     </main>
   </body>
 </html>

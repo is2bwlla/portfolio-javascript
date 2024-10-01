@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!--Fazer um conteiner para colocar os componentes-->
+    <div class="container">
+      <!--Titulo da pagina-->
+      <h1><strong>Cursos em Computação</strong></h1>
+      <!--Div com o 1 produto-->
+      <div class="product">
+        <img src="/images/html.png" alt="Curso HTML" />
+        <h3>Curso em HTML</h3>
+        <div class="quantidade">
+          <button onclick="decrementa(this)">-</button>
+          <input type="number" id="quantidade1" value="0" min="0" />
+          <button onclick="acrescenta(this)">+</button>
+        </div>
+        <div class="total">Total: R$ <span id="total1">0</span></div>
+      </div>
+
+      <div class="product">
+        <img src="/images/css.png" alt="Curso Css" />
+        <h3>Curso em HTML</h3>
+        <div class="quantidade">
+          <button onclick="decrementa(this)">-</button>
+          <input type="number" id="quantidade2" value="0" min="0" />
+          <button onclick="acrescenta(this)">+</button>
+        </div>
+        <div class="total">Total: R$ <span id="total2">0</span></div>
+      </div>
+
+      <div class="product">
+        <img src="/images/js.png" alt="Curso JS" />
+        <h3>Curso em HTML</h3>
+        <div class="quantidade">
+          <button onclick="decrementa(this)">-</button>
+          <input type="number" id="quantidade3" value="0" min="0" />
+          <button onclick="acrescenta(this)">+</button>
+        </div>
+        <div class="total">Total: R$ <span id="total3">0</span></div>
+      </div>
+      <div class="checkout">
+        <h2>Resumo do Pedido</h2>
+        <div class="item">
+          Valor Total dos Produtos: <span id="quantidadeProdutos">0</span>
+        </div>
+        <div class="item">
+          Valor a Pagar: R$ <span id="valorAPagar">0</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
