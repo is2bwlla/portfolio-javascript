@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante da FER</title>
+    <link rel="stylesheet" href="/styles/restaurante.css">
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ant">
+            <a href="/pages/pwfe.html"><button><img src="/images/seta-esquerda.png"></button></a>
+        </div>
+        
+        <h1>Bem Vindo ao Restaurante</h1>
+        <div class="menu">
+            <label>Escolha seu Prato:</label>
+            <select id="prato">
+                <option value="0">Selecione seu Prato</option>
+                <option value="35">Parmegiana - R$35,00</option>
+                <option value="20">Macarrão com Carne Moida - R$20,00</option>
+                <option value="35">Lasanha Bolonhesa - R$35,00</option>
+                <option value="40">Raviolli com Molho Branco - R$40,00</option>
+            </select>
+        </div>
+        <div class="quantidade">
+            <label>Quantidade</label>
+            <input type="number" id="quantidade" min="1" max="30" required>
+        </div>
+        <button onclick="calcularTotal()">Calcular Total</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script src="/scripts/restaurante.js"></script>
+</body>
+
+</html>

@@ -86,7 +86,9 @@ nav a {
 
 .container {
     height: 100vh;
-    background: linear-gradient(135deg, #f4f4f9 30%, palevioletred 60%);
+    background-image: url(/images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* RESPONSIVIDADE - MEDIA QUERIES */

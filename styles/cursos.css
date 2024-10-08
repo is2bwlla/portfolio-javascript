@@ -18,7 +18,7 @@ body {
 .container {
     width: 900px;
     padding: 20px;
-    background-color: rgba(244, 244, 244, 0.9);
+    background-color: rgba(196, 196, 196, 0.9);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -71,3 +71,20 @@ h1 {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.ant button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.ant img {
+    max-width: 10%;
+}
+

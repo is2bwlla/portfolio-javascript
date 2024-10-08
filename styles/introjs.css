@@ -50,7 +50,7 @@ h5 {
     justify-content: center;
 }
 
-img {
+.ant img, .next img {
     width: 7%;
     height: auto;
 }

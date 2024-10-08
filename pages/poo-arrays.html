@@ -75,7 +75,6 @@
       <h4>-- Aula por Emilly e Elias.</h4>
 
       <h5>EXERCÍCIO 01</h5>
-      <p></p>
       <div class="question">
         <p class="js-concepts">Montando a classe Carro.</p>
         <img src="/images/poo-exercicio01.png" alt="">
@@ -86,21 +85,65 @@
       </div>
 
       <h5>EXERCÍCIO 02</h5>
-      <p></p>
       <div class="question">
         <p class="js-concepts">Montando a classe Livro.</p>
         <img src="/images/poo-exercicio2.png" alt="">
 
-        <button class="button-concepts" onclick="livro1.resumo()()">RESUMIR</button>
+        <button class="button-concepts" onclick="livro1.resumo()">RESUMIR</button>
 
         <p class="output"></p> <!-- 1 -->
+      </div>
+
+      <h5>EXERCÍCIO 03</h5>
+      <div class="question">
+        <p class="js-concepts">Montando a classe contaBancaria.</p>
+        <img src="/images/poo-exercicio03.png" alt="">
+
+        <button class="button-concepts" onclick="pessoa4.negativado()">NEGATIVAR</button>
+
+        <p class="output"></p> <!-- 1 -->
+      </div>
+
+      <h5>EXERCÍCIO 04</h5>
+      <div class="question">
+        <p class="js-concepts">Montando a classe dispositivoEletronico.</p>
+        <img src="/images/poo-exercicio04.png" alt="">
+
+        <button class="button-concepts" onclick="celular1.ligar()">LIGAR</button>
+        <button class="button-concepts" onclick="celular1.desligar()">DESLIGAR</button>
+        <button class="button-concepts" onclick="celular1.falarTchau()">OI</button>
+        <button class="button-concepts" onclick="dispositivo.falarTchau()">TCHAU</button>
+
+        <p class="output"></p> <!-- 3 -->
+      </div>
+
+      <h5>EXERCÍCIO 05</h5>
+      <div class="question">
+        <p class="js-concepts">Montando a classe Funcionario.</p>
+        <img src="/images/poo-exercicio05.png" alt="">
+
+        <button class="button-concepts" onclick="gerente.exibirInformacoes()">EXIBIR</button>
+
+        <p class="output"></p> <!-- 4 -->
+      </div>
+
+      <br>
+
+      <h5>ARRAYS</h5>
+
+      <h5>EXERCÍCIO 05</h5>
+      <div class="question">
+        <p class="js-concepts">Intersecção entre dois arrays.</p>
+        <img src="/images/array-exercicio01.png" alt="">
+
+        <button class="button-concepts" onclick="arraysElias()">ARRAY</button>
+
+        <p class="output"></p> <!-- 5 -->
       </div>
 
 
 
     </div>
-
-
     </div>
   </main>
 
@@ -130,19 +173,112 @@
       resumo() {
         document.getElementsByClassName('output')[1].innerHTML = `${this.titulo} é um livro do(a) autor(a) ${this.#autor} que foi publicado em ${this.anoPublicacao}`;
       }
-
-      // Exercício 03:
-      get autor() {
-        return this.#autor;
-      }
-
-      set autor(novoAutor) {
-        return this.#autor = novoAutor;
-      }
     }
 
     livro1 = new Livro("Os dois morrem no final", "Adam Silveira", "2017")
-    livro1.autor = "Adam Moreira"
+
+    class contaBancaria {
+      #saldo
+      constructor(nome, saldo) {
+        this.nome = nome
+        this.#saldo = saldo
+      }
+
+      get saldo() {
+        return this.#saldo;
+      }
+
+      set saldo(novoSaldo) {
+        return this.#saldo = novoSaldo;
+      }
+
+      negativado() {
+        if (this.#saldo < 0) {
+          document.getElementsByClassName('output')[2].innerHTML = "Saldo inválido.";
+          return this.saldo;
+
+        } else {
+          document.getElementsByClassName('output')[2].innerHTML = `Saldo: ${this.#saldo}`;
+        }
+      }
+    }
+
+    pessoa4 = new contaBancaria("Isabella", 40)
+
+    class dispositivoEletronico {
+      constructor(nome) {
+        this.nome = nome
+        this.ligado = false
+      }
+      ligar() {
+        if (!this.ligado) {
+          this.ligado = true
+          document.getElementsByClassName('output')[3].innerHTML = "Dispositivo ligado.";
+        } else {
+          document.getElementsByClassName('output')[3].innerHTML = "Dispositivo já está ligado.";
+        }
+      }
+      desligar() {
+        if (this.ligado) {
+          this.ligado = false
+          document.getElementsByClassName('output')[3].innerHTML = "Dispositivo desligado.";
+        } else {
+          document.getElementsByClassName('output')[3].innerHTML = "Dispositivo já está desligado.";
+        }
+      }
+
+      falarTchau() {
+        document.getElementsByClassName('output')[3].innerHTML = "Tchau!";
+      }
+    }
+
+    class Smartphone extends dispositivoEletronico {
+      constructor(nome, cor, modelo) {
+        super(nome)
+        this.cor = cor
+        this.modelo = modelo
+      }
+      falarTchau() {
+        document.getElementsByClassName('output')[3].innerHTML = "Oi!";
+      }
+    }
+
+    celular1 = new Smartphone("samsung", "preto", "galaxy s10")
+    dispositivo = new dispositivoEletronico("iphone", "branco", "13")
+
+    class Funcionario {
+      constructor(nome, salario) {
+        this.nome = nome
+        this.salario = salario
+      }
+    }
+
+    class Gerente extends Funcionario {
+      constructor(nome, salario, departamento) {
+        super(nome, salario)
+        this.departamento = departamento
+      }
+
+      exibirInformacoes() {
+        document.getElementsByClassName('output')[4].innerHTML = `A gerente ${this.nome} está recebendo ${this.salario} no departamento ${this.departamento}`;
+      }
+    }
+
+    gerente = new Gerente("Isabella", 1400, "Almoxarifado.")
+
+    function intersection(set1, set2) {
+      return new Set([...set1].filter(item => set2.has(item)));
+    }
+
+    function arraysElias() {
+      const set1 = new Set([1, 2, 3, 4, 5, 6]);
+      const set2 = new Set([7, 8, 9, 1, 3]);
+
+      // Chama a função de interseção e converte o resultado para uma string
+      const result = intersection(set1, set2);
+
+      document.getElementsByClassName('output')[5].innerHTML = `Interseção: ${[...result].join(', ')}`;
+    }
 
 
   </script>

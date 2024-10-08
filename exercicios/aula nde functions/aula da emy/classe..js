@@ -94,7 +94,6 @@ class dispositivoEletronico {
         this.nome = nome
         this.ligado = false
     }
-
     ligar() {
         if (!this.ligado) {
             this.ligado = true
@@ -103,7 +102,6 @@ class dispositivoEletronico {
             console.log("Dispositivo já está ligado.")
         }
     }
-
     desligar() {
         if (this.ligado) {
             this.ligado = false
@@ -124,9 +122,8 @@ class Smartphone extends dispositivoEletronico {
         this.cor = cor
         this.modelo = modelo
     }
-
     falarTchau() {
-        console.log("oi!")
+        console.log("Oi!")
     }
 }
 
